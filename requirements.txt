@@ -1,0 +1,7 @@
+asgiref==3.2.10
+Django==3.0.7
+pydocstyle==5.1.0
+pyperclip==1.8.0
+pytz==2020.1
+snowballstemmer==2.0.0
+sqlparse==0.3.1
