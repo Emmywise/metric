@@ -121,3 +121,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'dash.CustomUser'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
