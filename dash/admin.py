@@ -24,4 +24,7 @@ class CustomUserAdmin(UserAdmin):
     search_fields = ('email',)
     ordering = ('email',)
 
+
+admin.site.site_header = "Dash Administration Page"
+
 admin.site.register(CustomUser, CustomUserAdmin)
