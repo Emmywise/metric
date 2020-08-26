@@ -6,6 +6,8 @@ from django.utils import timezone
 
 
 
+
+
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(('email address'), unique=True)
     is_staff = models.BooleanField(default=False)
@@ -17,5 +19,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
+
+    
     def __str__(self):
         return self.email
