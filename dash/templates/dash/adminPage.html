@@ -1,0 +1,24 @@
+{% extends "dash/static.html" %}
+{% block content %}
+    {% block body_block %}
+        {% csrf_token %}
+    {% endblock %}
+
+    {% load static %}
+
+    {% block title %}
+        <h1>welcome to Adminpage:</h1>
+    {% endblock %}
+
+    {% block body %}
+        <form method='POST'>
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type ='submit' value='send' class="btn btn-primary">
+        </form>
+    {% endblock %}
+
+    {% block footer %}
+       <h3> <a href="{% url 'dash:logout' %}">{{ logout }}logout</a></h3>
+    {% endblock %}
+{% endblock %}

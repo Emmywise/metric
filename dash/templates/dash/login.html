@@ -1,0 +1,18 @@
+{% extends "dash/static.html" %}
+{% block content %}
+
+    {% load static %}
+
+    {% block title %}
+        <h1>Admin Login:</h1>
+    {% endblock %}
+       
+    {% block login %}
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" name="" value="login" class="btn btn-primary">
+        </form>
+        <h2><a href="{% url 'dash:index' %}" class="btn btn-primary">{{ Home }}Home</a></h2>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "dash/static.html" %}
+{% block content %}
+
+  {% load static %}
+ 
+  {% block body_block %}
+    {% csrf_token %}
+  {% endblock %}
+
+    <h1>Welcome to the Metric !</h1>
+    <h4>
+      <a href='{% url "dash:login" %}'> login as admin</a>
+    </h4>
+    
+{% endblock %}
