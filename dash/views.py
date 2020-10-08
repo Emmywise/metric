@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from dash.forms import adminLoginForm
+from dash.forms import adminLoginForm, updateForm
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout 
 from django.http import HttpResponseRedirect, HttpResponse
@@ -46,3 +46,13 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('dash:index')
+
+def new_post(request):  
+    if request.method == "POST":
+        form = updateForm(request.POST)
+        if form.is_valid():
+            form.save
+            return redirect('dash:index')
+    else:
+        form = updateForm
+    return render(request, 'dash/adminPage.html',  {'form': form})

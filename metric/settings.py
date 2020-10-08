@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions',
+    'django_extensions',# for extensions like logging to work so as to easily see output and debug well
 ]
 
 MIDDLEWARE = [
@@ -122,7 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-AUTH_USER_MODEL = 'dash.CustomUser'
+
+
+AUTH_USER_MODEL = 'dash.CustomUser' # to enable authenticated users to be easily tweak, uisng email as login instead of username
+
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Configure Django App for Heroku.

@@ -11,10 +11,10 @@
     {% endblock %}
 
     {% block body %}
-        <form method='POST'>
+        <form method='POST' class="post-form">
             {%csrf_token%}
             {{form.as_p}}
-            <input type ='submit' value='send' class="btn btn-primary">
+            <input type ='submit' value='Post' class="btn btn-primary">
         </form>
     {% endblock %}
 
