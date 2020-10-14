@@ -20,6 +20,7 @@ def adminPage(request):
     return render(request, 'dash/adminPage.html',)
 
 def user_login(request):
+    
     form = adminLoginForm(request.POST)
     if request.method == "POST":
         email = request.POST.get('email')

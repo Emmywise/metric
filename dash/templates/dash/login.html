@@ -1,4 +1,4 @@
-{% extends "dash/static.html" %}
+{% extends "dash/frame.html" %}
 {% block content %}
 
     {% load static %}
@@ -7,10 +7,6 @@
         <h1>Admin Login:</h1>
     {% endblock %}
        
-    {% block body %}
-        {{ for update in }}
-    {% endblock %}
-
     {% block login %}
         <form method="POST">
             {% csrf_token %}
